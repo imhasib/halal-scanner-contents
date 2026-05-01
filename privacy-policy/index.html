@@ -1,2 +1,239 @@
-This is privacy policy for the website. It outlines how we collect, use, and protect your personal information when you visit our site. We are committed to ensuring that your privacy is protected. If we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.We may collect the following information:
-- Name and contact information including email address
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Halal Scanner</title>
+  <meta name="description" content="Privacy Policy for the Halal Scanner Android app." />
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --muted: #5f6b76;
+      --bg: #ffffff;
+      --border: #e5e7eb;
+      --accent: #0f6f3f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.25rem;
+      letter-spacing: -0.01em;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin: 2.25rem 0 0.75rem;
+      letter-spacing: -0.01em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0 0 2rem;
+    }
+    p, ul, ol, table { margin: 0.6rem 0 1rem; }
+    ul, ol { padding-left: 1.4rem; }
+    li { margin: 0.25rem 0; }
+    a { color: var(--accent); }
+    a:hover { text-decoration: underline; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.92em;
+      background: #f4f5f7;
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.55rem 0.7rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      background: #f7f8fa;
+      font-weight: 600;
+    }
+    .summary {
+      background: #f4faf6;
+      border: 1px solid #d6ecdf;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0 0;
+    }
+    .summary ul { margin: 0.25rem 0; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy &mdash; Halal Scanner</h1>
+    <p class="updated">Last updated: 2026-05-01</p>
+
+    <p>
+      This Privacy Policy describes how the <strong>Halal Scanner</strong>
+      Android app (<code>com.karigor.halalscanner</code>, &ldquo;the
+      app&rdquo;, &ldquo;we&rdquo;) handles information when you use it.
+      The app is published by Karigor.
+    </p>
+
+    <div class="summary">
+      <strong>Summary</strong>
+      <ul>
+        <li>The app does <strong>not</strong> require an account and does <strong>not</strong> collect personally identifying information.</li>
+        <li>The camera is used only to read product barcodes on-device. Images are never saved or uploaded.</li>
+        <li>Barcodes you scan are sent to a public product database (Open Food Facts) to look up product information. No user identifier is attached.</li>
+        <li>Crash reports (no personal data, no scanned content) may be sent to Firebase Crashlytics to help us fix bugs.</li>
+        <li>Your scan history and settings stay on your device.</li>
+      </ul>
+    </div>
+
+    <h2>What the app collects and why</h2>
+
+    <h3>1. Camera &mdash; barcode reading only</h3>
+    <p>
+      When you open the scanner, the app uses your device camera to detect
+      product barcodes via Google ML Kit on-device. The camera preview is
+      processed in memory to extract the barcode value.
+      <strong>No photos or video are stored on your device or transmitted
+      off it.</strong> You can revoke the Camera permission at any time in
+      Android settings; the rest of the app continues to work for browsing
+      history and rulesets.
+    </p>
+
+    <h3>2. Network requests</h3>
+    <p>The app makes outbound network calls to the following services:</p>
+    <ul>
+      <li>
+        <strong>Open Food Facts</strong>
+        (<code>https://world.openfoodfacts.org</code>) &mdash; when you scan
+        a barcode, the barcode is sent in a public API request to retrieve
+        product data such as name, brand, ingredients, labels, allergens,
+        and traces. Open Food Facts is an independent, publicly editable
+        food product database. No user identifier or account information is
+        included; the request carries only a User-Agent header containing
+        the app&rsquo;s name and version. See
+        <a href="https://world.openfoodfacts.org/terms-of-use">their terms of use</a>
+        for their policy.
+      </li>
+      <li>
+        <strong>Ruleset distribution</strong>
+        (<code>https://imhasib.github.io/halal-scanner-contents/</code>)
+        &mdash; the app periodically downloads the latest
+        halal/haram/doubtful classification ruleset from this static
+        endpoint. The request contains no user-identifying data beyond
+        standard HTTP metadata (IP address, user agent) handled by the
+        hosting provider (GitHub Pages).
+      </li>
+    </ul>
+    <p>
+      The app does not operate its own backend, does not have user
+      accounts, and does not transmit your scan history, location,
+      contacts, device identifiers, or any other personal data to any
+      server.
+    </p>
+
+    <h3>3. Crash reporting (Firebase Crashlytics)</h3>
+    <p>
+      If crash reporting is enabled in this build, unexpected crashes are
+      reported to Firebase Crashlytics so we can diagnose and fix them.
+      Crash reports include stack traces, the app version, the Android
+      version, and the device model. <strong>They do not include scanned
+      barcodes, product names, ingredients, your scan history, or any
+      custom user data we deliberately attach</strong> &mdash; the app does
+      not call Crashlytics&rsquo; user-id or custom-key APIs.
+    </p>
+    <p>
+      Firebase Crashlytics is a Google service; its handling of crash data
+      is covered by
+      <a href="https://policies.google.com/privacy">Google&rsquo;s privacy policy</a>.
+    </p>
+
+    <h3>4. Data stored on your device</h3>
+    <p>The app stores the following only on your device, in app-private storage:</p>
+    <ul>
+      <li><strong>Product cache</strong> &mdash; recently looked-up product data, kept briefly to avoid refetching (cache entries expire after ~24 hours).</li>
+      <li><strong>Scan history</strong> &mdash; timestamp, barcode, product name, halal verdict, and flagged ingredients for each scan, so you can review past scans.</li>
+      <li><strong>Ruleset data</strong> &mdash; the downloaded classification ruleset.</li>
+      <li><strong>Settings</strong> &mdash; your in-app preferences (e.g. conservative mode, haptic and sound toggles).</li>
+    </ul>
+    <p>
+      This data is excluded from Android cloud backup and device-to-device
+      transfer. It is removed when you uninstall the app or clear its
+      storage from Android settings.
+    </p>
+
+    <h2>What the app does NOT do</h2>
+    <ul>
+      <li>No user accounts or sign-in.</li>
+      <li>No advertising, no ad SDKs, no ad identifiers.</li>
+      <li>No location tracking.</li>
+      <li>No contacts, microphone, SMS, call log, or file-system browsing access.</li>
+      <li>No selling or sharing of personal information with third parties for advertising or marketing.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <table>
+      <thead>
+        <tr><th>Permission</th><th>Why it&rsquo;s needed</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>CAMERA</code></td><td>Read product barcodes via the device camera.</td></tr>
+        <tr><td><code>INTERNET</code></td><td>Look up product data and download the classification ruleset.</td></tr>
+        <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Detect connectivity to choose between cached and live data.</td></tr>
+        <tr><td><code>VIBRATE</code></td><td>Provide haptic feedback when a barcode is recognised.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Children&rsquo;s privacy</h2>
+    <p>
+      The app is a general-audience product information tool. It does not
+      knowingly collect personal information from children.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      We may update this policy as the app evolves. The &ldquo;Last
+      updated&rdquo; date at the top of this document will reflect the
+      most recent change.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy can be sent to
+      <a href="mailto:email2hasib@gmail.com">email2hasib@gmail.com</a>.
+    </p>
+
+    <footer>
+      &copy; Karigor &mdash; Halal Scanner
+    </footer>
+  </main>
+</body>
+</html>
