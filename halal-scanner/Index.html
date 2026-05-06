@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halal Scanner</title>
+  <meta name="description" content="Scan food products to check halal compliance." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --brand: #0f6f3f;
+      --brand-light: #ECFDF5;
+      --brand-mid: #d1fae5;
+      --text: #1a1a1a;
+      --muted: #5f6b76;
+      --border: #e5e7eb;
+      --bg: #f9fafb;
+      --white: #ffffff;
+      --radius: 12px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo {
+      width: 36px; height: 36px;
+      background: var(--brand);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+    }
+    header h1 { font-size: 1.15rem; font-weight: 700; }
+    main { max-width: 720px; margin: 48px auto; padding: 0 24px; width: 100%; flex: 1; }
+    .hero {
+      background: var(--brand);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      margin-bottom: 32px;
+    }
+    .hero h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
+    .hero p { opacity: 0.85; font-size: 1rem; max-width: 480px; }
+    .section-title {
+      font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    .card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 24px; }
+    .link-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 20px;
+      text-decoration: none; color: var(--text); font-size: 0.9rem;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.12s;
+    }
+    .link-row:last-child { border-bottom: none; }
+    .link-row:hover { background: var(--brand-light); }
+    .link-row .icon { font-size: 1.1rem; width: 24px; text-align: center; }
+    .link-row .label { flex: 1; font-weight: 500; }
+    .link-row .sub { font-size: 0.78rem; color: var(--muted); }
+    .badge { font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--brand-mid); color: var(--brand); }
+    .chevron { color: var(--muted); font-size: 0.8rem; }
+    footer { text-align: center; padding: 24px; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--border); }
+    footer a { color: var(--brand); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🥩</div>
+    <h1>Halal Scanner</h1>
+  </header>
+  <main>
+    <div class="hero">
+      <h2>Halal Scanner</h2>
+      <p>Scan food product barcodes to instantly check halal compliance using an up-to-date rule set.</p>
+    </div>
+    <p class="section-title">Rule Sets</p>
+    <div class="card">
+      <a class="link-row" href="rule-set/latest.json">
+        <span class="icon">📋</span>
+        <span class="label">Latest Rule Set</span>
+        <span class="badge">LATEST</span>
+        <span class="chevron">›</span>
+      </a>
+      <a class="link-row" href="rule-set/v2026.04.27.json">
+        <span class="icon">🗂️</span>
+        <span class="label">Rule Set</span>
+        <span class="sub">v2026.04.27</span>
+        <span class="badge">JSON</span>
+        <span class="chevron">›</span>
+      </a>
+      <a class="link-row" href="rule-set/v2026.04.json">
+        <span class="icon">🗂️</span>
+        <span class="label">Rule Set</span>
+        <span class="sub">v2026.04</span>
+        <span class="badge">JSON</span>
+        <span class="chevron">›</span>
+      </a>
+    </div>
+    <p class="section-title">Legal</p>
+    <div class="card">
+      <a class="link-row" href="privacy-policy/">
+        <span class="icon">🔒</span>
+        <span class="label">Privacy Policy</span>
+        <span class="chevron">›</span>
+      </a>
+    </div>
+  </main>
+  <footer>
+    &copy; 2026 Karigor &mdash; <a href="../">All Projects</a>
+  </footer>
+</body>
+</html>

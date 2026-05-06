@@ -1,3 +1,229 @@
-<a href="rule-set/latest.json">Latest Rule Set</a>
-<a href="rule-set/v2026.04.json.json">Versioned Rule Set</a>
-<a href="privacy-policy/">Privacy Policy</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karigor — Projects</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #4F46E5;
+      --brand-light: #EEF2FF;
+      --text: #111827;
+      --muted: #6B7280;
+      --border: #E5E7EB;
+      --bg: #F9FAFB;
+      --white: #FFFFFF;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header .logo {
+      width: 36px;
+      height: 36px;
+      background: var(--brand);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header .logo svg { width: 20px; height: 20px; }
+
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    main {
+      max-width: 860px;
+      margin: 48px auto;
+      padding: 0 24px;
+      width: 100%;
+      flex: 1;
+    }
+
+    .hero {
+      margin-bottom: 40px;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: box-shadow 0.15s;
+    }
+
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .card-icon.halal { background: #ECFDF5; }
+    .card-icon.speaking { background: var(--brand-light); }
+
+    .card-title { font-size: 1.1rem; font-weight: 700; }
+    .card-desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+
+    .links { display: flex; flex-direction: column; gap: 8px; }
+
+    .link-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: var(--bg);
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.875rem;
+      transition: background 0.12s;
+    }
+
+    .link-row:hover { background: var(--brand-light); color: var(--brand); }
+
+    .link-row .link-icon { font-size: 1rem; width: 20px; text-align: center; }
+
+    .badge {
+      margin-left: auto;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--brand-light);
+      color: var(--brand);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+        <path d="M2 17l10 5 10-5"/>
+        <path d="M2 12l10 5 10-5"/>
+      </svg>
+    </div>
+    <h1>Karigor</h1>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h2>Projects</h2>
+      <p>Static web content for Karigor apps and tools.</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon halal">🥩</div>
+          <div>
+            <div class="card-title">Halal Scanner</div>
+          </div>
+        </div>
+        <p class="card-desc">Scan food products to check halal compliance against a versioned rule set.</p>
+        <div class="links">
+          <a class="link-row" href="halal-scanner/rule-set/latest.json">
+            <span class="link-icon">📋</span> Latest Rule Set <span class="badge">JSON</span>
+          </a>
+          <a class="link-row" href="halal-scanner/rule-set/v2026.04.27.json">
+            <span class="link-icon">🗂️</span> Rule Set v2026.04.27 <span class="badge">JSON</span>
+          </a>
+          <a class="link-row" href="halal-scanner/rule-set/v2026.04.json">
+            <span class="link-icon">🗂️</span> Rule Set v2026.04 <span class="badge">JSON</span>
+          </a>
+          <a class="link-row" href="halal-scanner/privacy-policy/">
+            <span class="link-icon">🔒</span> Privacy Policy
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon speaking">🎙️</div>
+          <div>
+            <div class="card-title">Speaking Club</div>
+          </div>
+        </div>
+        <p class="card-desc">A community platform for practicing and improving public speaking skills.</p>
+        <div class="links">
+          <a class="link-row" href="speaking-club/privacy-policy/">
+            <span class="link-icon">🔒</span> Privacy Policy
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Karigor. All rights reserved.
+  </footer>
+
+</body>
+</html>

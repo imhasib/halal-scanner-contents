@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Speaking Club</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #4F46E5;
+      --brand-light: #EEF2FF;
+      --text: #111827;
+      --muted: #6B7280;
+      --border: #E5E7EB;
+      --bg: #F9FAFB;
+      --white: #FFFFFF;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header .logo {
+      width: 36px;
+      height: 36px;
+      background: var(--brand);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header .logo svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    header span {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--brand) 0%, #7C3AED 100%);
+      color: white;
+      padding: 60px 24px 48px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      opacity: 0.85;
+      max-width: 520px;
+      margin: 0 auto 20px;
+    }
+
+    .hero .meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .toc a {
+      color: var(--brand);
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    .section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      margin-bottom: 24px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: var(--brand-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--brand);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      padding-top: 6px;
+    }
+
+    .section p {
+      color: #374151;
+      margin-bottom: 14px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul, .section ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+      display: grid;
+      gap: 6px;
+      color: #374151;
+    }
+
+    .section ul li::marker { color: var(--brand); }
+
+    .highlight-box {
+      background: var(--brand-light);
+      border-left: 4px solid var(--brand);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      color: #312E81;
+      font-size: 15px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+
+    .data-table th {
+      background: var(--brand-light);
+      color: var(--brand);
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 14px;
+    }
+
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table tr:nth-child(even) td { background: #F9FAFB; }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .badge-green { background: #DCFCE7; color: #166534; }
+    .badge-yellow { background: #FEF9C3; color: #713F12; }
+    .badge-red { background: #FEE2E2; color: #991B1B; }
+
+    .contact-card {
+      background: linear-gradient(135deg, var(--brand-light) 0%, #F5F3FF 100%);
+      border: 1px solid #C7D2FE;
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .contact-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p { color: var(--muted); margin-bottom: 16px; }
+
+    .contact-card a {
+      display: inline-block;
+      background: var(--brand);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .contact-card a:hover { background: #4338CA; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--brand); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .section { padding: 24px 20px; }
+      .hero { padding: 44px 20px 36px; }
+      .data-table { font-size: 13px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.03 2 11c0 2.76 1.3 5.24 3.36 6.95L4 22l4.46-1.49C9.55 20.83 10.75 21 12 21c5.52 0 10-4.03 10-9s-4.48-9-10-9zm1 13H7v-2h6v2zm2-4H7V9h8v2z"/>
+    </svg>
+  </div>
+  <span>Speaking Club</span>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>Privacy Policy</h1>
+  <p>We believe in transparency. Here is exactly what data we collect, why we collect it, and how we protect it.</p>
+  <div class="meta">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+    Effective date: May 6, 2026 &nbsp;·&nbsp; Last updated: May 6, 2026
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#who-we-are">Who We Are</a></li>
+      <li><a href="#data-we-collect">Data We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Your Data</a></li>
+      <li><a href="#data-sharing">Data Sharing &amp; Disclosure</a></li>
+      <li><a href="#data-retention">Data Retention</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. Who We Are -->
+  <div class="section" id="who-we-are">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </div>
+      <h2>1. Who We Are</h2>
+    </div>
+    <p>Speaking Club ("we", "us", or "our") is a language learning platform that connects users for real-time voice and video conversation practice. Our service is available as a mobile application (Android &amp; iOS) and as a web application.</p>
+    <p>This Privacy Policy explains how we collect, use, and protect information about you when you use Speaking Club. By using our service you agree to the practices described here.</p>
+    <div class="highlight-box">
+      If you have questions about this policy or your personal data, email us at <strong>email2hasib@gmail.com</strong>.
+    </div>
+  </div>
+
+  <!-- 2. Data We Collect -->
+  <div class="section" id="data-we-collect">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+      </div>
+      <h2>2. Data We Collect</h2>
+    </div>
+    <p>We only collect data that is necessary to operate and improve the service.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Examples</th>
+          <th>Required?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Account data</strong></td>
+          <td>Name, email address, password (hashed), preferred language, proficiency level</td>
+          <td><span class="badge badge-red">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>Profile data</strong></td>
+          <td>Profile photo, bio, country, learning goals</td>
+          <td><span class="badge badge-yellow">Optional</span></td>
+        </tr>
+        <tr>
+          <td><strong>Usage data</strong></td>
+          <td>Session timestamps, call duration, features used, matchmaking queue activity</td>
+          <td><span class="badge badge-red">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>Communication data</strong></td>
+          <td>WebRTC audio/video streams during active calls (peer-to-peer, not stored on our servers)</td>
+          <td><span class="badge badge-red">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>AI Practice data</strong></td>
+          <td>Text or audio submitted to AI practice sessions for feedback generation</td>
+          <td><span class="badge badge-yellow">Optional</span></td>
+        </tr>
+        <tr>
+          <td><strong>Device &amp; technical data</strong></td>
+          <td>IP address, device type, OS version, app version, crash reports</td>
+          <td><span class="badge badge-red">Required</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Microphone &amp; Camera:</strong> We request microphone and camera permissions solely to enable voice and video calls. We do not record, store, or transmit your audio or video beyond the live peer-to-peer call session.</p>
+    <p><strong>Cookies &amp; Local Storage:</strong> The web application uses browser local storage to persist your authentication token and preferences. We use no third-party advertising cookies.</p>
+  </div>
+
+  <!-- 3. How We Use -->
+  <div class="section" id="how-we-use">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <h2>3. How We Use Your Data</h2>
+    </div>
+    <p>We use your data only for the following purposes:</p>
+    <ul>
+      <li><strong>Provide the service</strong> — create your account, authenticate you, match you with conversation partners, and facilitate calls.</li>
+      <li><strong>Personalization</strong> — show relevant partners based on your language level and learning goals.</li>
+      <li><strong>AI Practice</strong> — generate feedback on your spoken or written English using AI; input is processed and then discarded.</li>
+      <li><strong>Safety &amp; abuse prevention</strong> — detect and act on reports of inappropriate conduct.</li>
+      <li><strong>Service improvement</strong> — analyse aggregated, anonymised usage patterns to make the product better.</li>
+      <li><strong>Communications</strong> — send transactional emails (password reset, important service notices). We do not send marketing emails without your explicit opt-in.</li>
+    </ul>
+    <div class="highlight-box">
+      We do <strong>not</strong> sell your personal data, rent it, or use it for targeted advertising.
+    </div>
+  </div>
+
+  <!-- 4. Data Sharing -->
+  <div class="section" id="data-sharing">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </div>
+      <h2>4. Data Sharing &amp; Disclosure</h2>
+    </div>
+    <p>We share your data only in limited circumstances:</p>
+    <ul>
+      <li><strong>Other users</strong> — your display name, profile photo, and language level are visible to matched conversation partners. Your email and private details are never shared with other users.</li>
+      <li><strong>Infrastructure providers</strong> — we use cloud hosting, database, and Redis services. These providers process data on our behalf under strict data processing agreements and do not use your data for their own purposes.</li>
+      <li><strong>AI service provider</strong> — AI Practice content is sent to an AI provider API for processing. Input is not retained by the provider beyond the request.</li>
+      <li><strong>Legal obligations</strong> — we may disclose data if required by law, court order, or to protect the rights and safety of our users.</li>
+    </ul>
+    <p>We require all third-party processors to maintain appropriate security standards and to process data only as instructed by us.</p>
+  </div>
+
+  <!-- 5. Data Retention -->
+  <div class="section" id="data-retention">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h2>5. Data Retention</h2>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data type</th>
+          <th>Retention period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Account &amp; profile data</td>
+          <td>Until you delete your account, then 30 days before permanent deletion</td>
+        </tr>
+        <tr>
+          <td>Call history &amp; session logs</td>
+          <td>90 days</td>
+        </tr>
+        <tr>
+          <td>AI practice transcripts</td>
+          <td>Not retained — discarded after feedback is generated</td>
+        </tr>
+        <tr>
+          <td>Crash &amp; error logs</td>
+          <td>30 days</td>
+        </tr>
+        <tr>
+          <td>Anonymised analytics</td>
+          <td>Up to 2 years</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>When you delete your account, all personally identifiable data is deleted within 30 days except where we are required by law to retain it longer.</p>
+  </div>
+
+  <!-- 6. Security -->
+  <div class="section" id="security">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h2>6. Security</h2>
+    </div>
+    <p>We take reasonable technical and organisational measures to protect your data:</p>
+    <ul>
+      <li>All data in transit is encrypted using <strong>TLS 1.2+</strong>.</li>
+      <li>Passwords are stored as <strong>bcrypt hashes</strong> — we never store plain-text passwords.</li>
+      <li>Authentication uses short-lived <strong>JWT tokens</strong>; no session data is stored server-side.</li>
+      <li>Real-time calls use <strong>WebRTC peer-to-peer encryption</strong> (DTLS-SRTP) — audio and video travel directly between devices and are never routed through our servers.</li>
+      <li>Access to production databases is restricted to authorised personnel only.</li>
+    </ul>
+    <p>No system is perfectly secure. If you suspect a security issue, please contact us at <strong>email2hasib@gmail.com</strong> immediately.</p>
+  </div>
+
+  <!-- 7. Your Rights -->
+  <div class="section" id="your-rights">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      </div>
+      <h2>7. Your Rights</h2>
+    </div>
+    <p>Depending on your location you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+      <li><strong>Correction</strong> — ask us to correct inaccurate or incomplete data.</li>
+      <li><strong>Deletion</strong> — request deletion of your account and associated personal data.</li>
+      <li><strong>Portability</strong> — receive your data in a structured, machine-readable format.</li>
+      <li><strong>Restriction</strong> — ask us to limit how we process your data.</li>
+      <li><strong>Objection</strong> — object to processing based on legitimate interests.</li>
+      <li><strong>Withdraw consent</strong> — where processing is based on consent, you may withdraw it at any time.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <strong>email2hasib@gmail.com</strong>. We will respond within 30 days. Account deletion is also available directly in the app under <em>Settings → Delete Account</em>.</p>
+  </div>
+
+  <!-- 8. Children -->
+  <div class="section" id="children">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <h2>8. Children's Privacy</h2>
+    </div>
+    <p>Speaking Club is intended for users aged <strong>13 and older</strong>. We do not knowingly collect personal data from children under 13. If you believe a child under 13 has created an account, please contact us at <strong>email2hasib@gmail.com</strong> and we will delete the account promptly.</p>
+    <p>Users aged 13–17 must have parental or guardian consent before using the service where required by local law.</p>
+  </div>
+
+  <!-- 9. Changes -->
+  <div class="section" id="changes">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+      </div>
+      <h2>9. Changes to This Policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. When we make material changes, we will notify you by:</p>
+    <ul>
+      <li>Sending an in-app notification, and/or</li>
+      <li>Sending an email to your registered address at least 14 days before the change takes effect.</li>
+    </ul>
+    <p>The "Last updated" date at the top of this page will always reflect when the current version was published. Continued use of the service after changes take effect constitutes acceptance of the updated policy.</p>
+    <p>Previous versions of this policy are available on request.</p>
+  </div>
+
+  <!-- 10. Contact -->
+  <div class="section" id="contact">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <h2>10. Contact Us</h2>
+    </div>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out:</p>
+    <div class="contact-card">
+      <h3>Speaking Club Privacy Team</h3>
+      <p>We aim to respond to all privacy inquiries within 30 days.</p>
+      <a href="mailto:email2hasib@gmail.com">email2hasib@gmail.com</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 Speaking Club. All rights reserved. &nbsp;·&nbsp; <a href="/">Home</a></p>
+</footer>
+
+</body>
+</html>
